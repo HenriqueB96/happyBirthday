@@ -5,12 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aniversário</title>
     <link rel="stylesheet" href="styles/main.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
-    <h1> Happy Birthday</h1>
+    <header class="hero">
+        <div class="container">
+            <form class="hero__form">
+                <h1 class="hero__form__title">
+                    Aniversário do Henrique <br>
+                        Confirme Sua presença !
+                </h1>
+                <p class="hero__form__content">
+                    <label> Nome</label>
+                    <input type="text">
+                </p>
+                <p class="hero__form__content">
+                    <label> Sobrenome</label>
+                    <input type="text">
+                </p>
+                <p class="hero__form__content">
+                    <label> Email </label>
+                    <input type="email">
+                </p>
+                <p class="hero__form__content">
+                    <button type="submit">Enviar!</button>
+                </p>
+            </form>
+        </div>
+    </header>
+
+    <section class="event event--date">
+        <div class="container" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="3000">>
+            <div class="event__details">
+                <h2 class="event__details__title"> Contagem Regressiva !</h2>
+                <p class="event__details__date">
+                    Começa em <span id="contador"></span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="event event--where event--image-left">
+        <h2 class="event__details__title"> Onde Vai ser ?</h2>
+        <div class="container" data-aos="zoom-in-down"  >
+            <div class="event__details__where">
+                <p class="event__details__description">
+                    Local : rua aine | Z/S <br>
+                    CEP : 02321 232 <br>
+                    Cidade : São Paulo
+                </p>
+            </div>
+            <img class="event__image " src="./imagens/section__image.jpg" alt="Salão de festa">
+        </div>
+    </section>
+
+    <footer class="footer footer--gradient">
+        <ul class="footer__social-icons">
+            <li><a href="#"><i class="fab fa-facebook"> </i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </footer>
 
 
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>

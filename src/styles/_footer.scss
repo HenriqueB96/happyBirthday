@@ -1,0 +1,27 @@
+@use "variables";
+
+.footer {
+
+    padding: 20px 0;
+    text-align: center;
+    &--gradient {
+        background-image: linear-gradient(variables.$blue4, variables.$blue5);
+    }
+
+    &__social-icons {
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        li a {
+            color: variables.$textWhite;
+            font-size: 54px;
+            text-decoration: none;
+
+        }
+    }
+}

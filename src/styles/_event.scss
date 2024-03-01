@@ -1,0 +1,117 @@
+@use "variables";
+
+.event {
+padding: 80px 0;
+
+&--date {
+    background-image: linear-gradient(variables.$blue2, variables.$blue3);
+}
+
+&--where {
+    background-image: linear-gradient(variables.$blue3, variables.$blue4);
+}
+
+&--image-left {
+    .container {
+        flex-direction: row-reverse;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 640px) {
+        margin: 26px auto;
+        display: block;
+        align-items: center;
+    }
+    
+    @media screen and (min-width: 640px) and (max-width:1023px){
+        margin: 26px;
+        display: block;
+        align-items: center;
+    }
+}
+
+&__image {
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+
+    @media (max-width: 640px) {
+        margin: 26px auto;
+        display: block;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 640px) and (max-width:1023px){
+        margin: auto;
+        display: block;
+        align-items: center;
+    }
+}
+&__details {
+
+    &__where {
+        display: flex;
+        justify-content: space-between;
+        margin: 10%;
+
+    }
+
+    &__title {
+        font-size: 46px;
+        text-align: center;
+        color: variables.$textTitle;
+        font-weight: bold;
+        padding-bottom: 30px;
+
+        
+    }
+
+    &__description {
+        font-size: 26px;
+        color: variables.$textBlack;
+        font-weight: bold;
+        line-height: 50px;
+
+        @media (max-width: 640px) {
+            margin: 26px auto;
+            align-items: center;
+        }
+
+        @media screen and (min-width: 640px) and (max-width:1023px){
+            margin: auto;
+            display: block;
+            align-items: center;
+        }
+    }
+
+    &__date {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: bold;
+        text-align: center;
+        color: variables.$blue4;
+        background-color: variables.$blue2;
+        padding: 1em;
+        border-radius: 20px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(0, 247, 255);
+            transition: 3s;
+            
+        }
+
+
+
+    }
+    
+}
+}
